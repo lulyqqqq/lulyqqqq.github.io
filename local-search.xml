@@ -4,6 +4,82 @@
   
   
   <entry>
+    <title>Java命名规范</title>
+    <link href="/2022/06/16/Java%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/"/>
+    <url>/2022/06/16/Java%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/</url>
+    
+    <content type="html"><![CDATA[<h1 id="JAVA命名规范"><a href="#JAVA命名规范" class="headerlink" title="JAVA命名规范"></a>JAVA命名规范</h1><p><strong>JAVA编码规范</strong></p><p>1 <strong>目的</strong></p><p>为了保证所每个项目组编写出的程序都符合相同的规范，便于理解和维护，便于检查、减少出错概率，有助于成员间交流，保证一致性、统一性而建立的java程序编码规范。</p><p>2 <strong>范围</strong></p><p>该规范适用于所有基于JAVA开发的项目。</p><p>3 <strong>规范内容</strong></p><p><strong>3.1 命名规范</strong></p><p><strong>包(package)命名</strong></p><ol><li><p>package名字必须由小写字母组成的英文单词或拼音组成</p></li><li><p>英文单词或拼音的含义必须能够大致表示该package的用途</p></li><li><p>多个单词或拼音的构成命名，第一个单词(可缩写)全部小写，第二个单词(可缩写)的首字母必须大写，其余字母小写</p></li><li><p>所有的package都必须使用com.philwong.package1Name的命名结构</p></li></ol><p><strong>类(class)命名</strong></p><ol><li><p>Class命名必须由大写字母开头，后面的字母由小写字母组成的英文单词或拼音组成</p></li><li><p>英文单词或拼音的含义必须能够大致表示该class的用途</p></li><li><p>多个单词或拼音的构成命名，第一个单词或拼音(可缩写)全部小写，第二个单词或拼音(可缩写)的首字母必须大写，其余字母小写</p></li><li><p>servlet 类必须使用类名 + Servlet的结构</p></li><li><p>实体类(entity class)必须使用实体名称的英文单词或拼音命名</p></li><li><p>实体管理类(entity Manager)必须使用实体名称的英文单词或拼音+Manager的结构</p></li><li><p>仅返回结果集的用于数据库查询的servlet使用dso + 英文单词或拼音 + Servlet</p></li><li><p>用于初始化服务器或数据库或者在服务器启动时执行的servlet使用init + 英文单词或拼音 + Servlet</p></li><li><p>返回业务逻辑的servlet使用logic + 英文单词或拼音 + Servlet</p></li></ol><p><strong>类变量和常量的命名</strong></p><ol><li><p>类变量和常量的命名必须使用小写字母构成的英文单词或拼音</p></li><li><p>多个单词或拼音的构成命名，第一个单词(可缩写)全部小写，第二个单词(可缩写)的首字母必须大写，其余字母小写</p></li><li><p>静态变量的命名必须使用static标示</p></li><li><p>必须使用protect、public、private标示类变量和常量；缺省可省略的public标示符也必须注明，不能省略</p></li><li><p>常量命名全部使用大写字母构成的英文单词和拼音</p></li><li><p>同名类变量或常量使用变量名或者常量命的英文单词或拼音+下划线+阿拉伯数字构成用于区分</p></li></ol><p><strong>参数命名</strong></p><ol><li><p>参数的命名必须使用小写字母构成的英文单词或拼音</p></li><li><p>多个单词或拼音的构成命名，第一个单词(可缩写)全部小写，第二个单词(可缩写)的首字母必须大写，其余字母小写</p></li><li><p>同名参数的英文单词或拼音+下划线+阿拉伯数字构成用于区分</p></li><li><p>参数命名必须能够标示其含义</p></li></ol><p><strong>数组命名</strong></p><ol><li><p>数组必须使用小写字母构成的英文单词或拼音+[ ]</p></li><li><p>多个单词或拼音的构成命名，第一个单词(可缩写)全部小写，第二个单词(可缩写)的首字母必须大写，其余字母小写</p></li><li><p>数组总是使用：String arrary[ ] 命名，而不是 String[] array</p></li><li><p>数组命名必须能够标示其含义</p></li></ol><p><strong>方法的命名</strong></p><ol><li><p>方法必须使用小写字母构成的英文单词或拼音</p></li><li><p>多个单词或拼音的构成命名，第一个单词(可缩写)全部小写，第二个单词(可缩写)的首字母必须大写，其余字母小写</p></li><li><p>方法的命名必须能够标示其含义</p></li><li><p>静态方法必须使用static标示</p></li><li><p>必须使用protect、public、private标示方法；缺省可省略的public标示符也必须注明，不能省略</p></li></ol><p><strong>其它相关文件的命名</strong></p><p>(jsp文件、javaScript文件、图片文件、css文件、xml文件、DTD文件、xsl文件、属性配置文件、HTML文件)</p><ol><li><p>文件的命名必须使用小写字母构成的英文单词或拼音</p></li><li><p>多个单词或拼音的构成命名，第一个单词(可缩写)全部小写，第二个单词(可缩写)的首字母必须大写，其余字母小写</p></li><li><p>文件的命名必须能够标示其含义</p></li><li><p>属性配置文件名后缀使用 *.property</p></li><li><p>jsp文件的</p></li></ol><p><strong>HTML相关对象的命名</strong></p><ol><li><p>命名必须使用小写字母构成的英文单词或拼音</p></li><li><p>多个单词或拼音的构成命名，第一个单词(可缩写)全部小写，第二个单词(可缩写)的首字母必须大写，其余字母小写</p></li><li><p>命名必须能够标示其含义</p></li><li><p>field： fld + 单词或拼音</p></li><li><p>textArea：ta + 单词或拼音</p></li><li><p>checkbox: cb + 单词或拼音</p></li><li><p>radioBox: rb + + 单词或拼音</p></li><li><p>image : img + 单词或拼音</p></li><li><p>link : lk + 单词或拼音</p></li><li><p>hiddenFileld : hiddenFld + 单词或拼音</p></li><li><p>pullDownSelection: ps + 单词或拼音</p></li><li><p>horizonLine: hl + 单词或拼音</p></li><li><p>button : btn + 单词或拼音</p></li><li><p>imageButton : imgBtn + 单词或拼音</p></li><li><p>banner : ban + 单词或拼音</p></li></ol><p><strong>3.2 文件样式规范</strong></p><p><strong>版权信息</strong></p><p>/**</p><p>*Copyright 2003 电子计算技术研究所</p><p>*All Right Reserved</p><p>*Author ：作者姓名</p><p>*编码日期格式：YYYY-MM-DD</p><p>*/</p><p><strong>package/import</strong></p><p>package行要在import之前，import中标准的包名要在本地的包名之前，而且字母顺序排列；如果import行中包括同一包中的不同子目录，则应该使用*来处理;二者之间应该空一行</p><p>package com.philwong.system.configManager;</p><p>import com.philwong.philwongException.*;</p><p>import java.io.*;</p><p>import java.util.Observable;</p><p><strong>类注释和类定义</strong></p><p>类注释用于解释类的结构和主要功能</p><p>/**</p><p>*编码实现的功能简要描述以及注意事项</p><p>*</p><p>*/</p><p>类定义：</p><p>public configManager</p><p>extend Property</p><p>implements Cloneable {</p><p>}</p><p><strong>成员变量</strong></p><p>public 类型的成员变量必须做出注释说明;同一变量类型定义在一起；不同类型变量之间空一行</p><p>/**</p><p>*配置文件的文件名和路径</p><p>*/</p><p>public String fileName = “”;</p><p>public String filePath = “”;</p><p>protected java.sql.Date createdDate = null;</p><p>…</p><p><strong>成员变量存取方法(不是必需的)</strong></p><p>/**</p><p>*成员变量存取方法注释说明</p><p>*/</p><p>public String getFileName(){ return filename };</p><p>…</p><p><strong>构造函数</strong></p><p>构造函数采取递增的方式，参数多的放在后面</p><p>public configManager() {</p><p>..</p><p>}</p><p>public configManager(String fileName) {</p><p>..</p><p>}</p><p>public configManager(String filename,String filePath) {</p><p>..</p><p>}</p><p><strong>成员方法</strong></p><ol><li><p>每一个类尽可能都定义一个toString()方法</p></li><li><p>如果有main()方法，那么应该放在类的底部</p></li><li><p>每个方法之间空一行</p></li></ol><p><strong>修改注释说明</strong></p><p><strong>/*</strong>*</p><p>*****修改说明：</p><p>*****修改人： 修改日期：</p><p>*****修改原因：</p><p>***/**</p><p>public setFilePath(String filePath) {</p><p>//old code remark line 124</p><p>//this.filePath = filePath;</p><p>//new code 126 –130</p><p>if (filePath = = null) {</p><p>this.filePath = “”;</p><p>} else {</p><p>this.filePath = filePath;</p><p>}</p><p>}</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Day 2</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>BS CS架构了解</title>
+    <link href="/2022/06/16/BS-CS%E6%9E%B6%E6%9E%84%E4%BA%86%E8%A7%A3/"/>
+    <url>/2022/06/16/BS-CS%E6%9E%B6%E6%9E%84%E4%BA%86%E8%A7%A3/</url>
+    
+    <content type="html"><![CDATA[<h1 id="B-S-C-S架构了解"><a href="#B-S-C-S架构了解" class="headerlink" title="B/S C/S架构了解"></a>B/S C/S架构了解</h1><p><a href="https://blog.csdn.net/sea_snow/article/details/81187804"> 深入理解B/S与C/S架构_雪飞_海的博客-CSDN博客_b/s架构</a></p><p>一、什么是C/S架构<br>C/S架构是第一种比较早的软件架构，主要用于局域网内。也叫 客户机/服务器模式。</p><p>它可以分为客户机和服务器两层：</p><p>第一层:  在客户机系统上结合了界面显示与业务逻辑；</p><p>第二层:  通过网络结合了数据库服务器。</p><p>简单的说就是第一层是用户表示层，第二层是数据库层。</p><p>　 这里需要补充的是，客户端不仅仅是一些简单的操作，它也是会处理一些运算，业务逻辑的处理等。也就是说，客户端也做着一些本该由服务器来做的一些事情，如图所示：</p><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE3LmNuYmxvZ3MuY29tL2Jsb2cvMTA0NjA3NS8yMDE3MTEvMTA0NjA3NS0yMDE3MTEwMzEzMjExOTE4NS0yMDk2MzA0NDY4LnBuZw?x-oss-process=image/format,png" alt="img"></p><p>C/S架构软件有一个特点，就是如果用户要使用的话，需要下载一个客户端，安装后就可以使用。比如QQ,OFFICE软件等。</p><p>1、C/S架构的优点：</p><p>1 C/S架构的界面和操作可以很丰富。（客户端操作界面可以随意排列，满足客户的需要）</p><p>2 安全性能可以很容易保证。（因为只有两层的传输，而不是中间有很多层。</p><p>3 由于只有一层交互，因此响应速度较快。（直接相连，中间没有什么阻隔或岔路，比如QQ，每天那么多人在线，也不觉得慢）</p><p>2、C/S架构的缺点：</p><p>可以将QQ作为类比：</p><p>1 适用面窄，通常用于局域网中。</p><p>2 用户群固定。由于程序需要安装才可使用，因此不适合面向一些不可知的用户。</p><p>3 维护成本高，发生一次升级，则所有客户端的程序都需要改变。</p><p>二、什么是B/S架构<br>B/S架构的全称为Browser/Server，即浏览器/服务器结构。</p><p>Browser指的是Web浏览器，极少数事务逻辑在前端实现，但主要事务逻辑在服务器端实现。</p><p>B/S架构的系统无须特别安装，只有Web浏览器即可。</p><p>其实就是我们前端现在做的一些事情，大部分的逻辑交给后台来实现，我们前端大部分是做一些数据渲染，请求等比较少的逻辑。</p><p>B/S架构的分层：</p><p>与C/S架构只有两层不同的是，B/S架构有三层，分别为：</p><p>第一层表现层：主要完成用户和后台的交互及最终查询结果的输出功能。</p><p>第二层逻辑层：主要是利用服务器完成客户端的应用逻辑功能。</p><p>第三层数据层：主要是接受客户端请求后独立进行各种运算。</p><p>如图所示：</p><p><img src="https://img-blog.csdnimg.cn/20200118143816483.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NlYV9zbm93,size_16,color_FFFFFF,t_70" alt="img"></p><p>B/S架构的优点：</p><p>1、客户端无需安装，有Web浏览器即可。<br>2、BS架构可以直接放在广域网上，通过一定的权限控制实现多客户访问的目的，交互性较强。<br>3、BS架构无需升级多个客户端，升级服务器即可。可以随时更新版本，而无需用户重新下载啊什么的。</p><p>B/S架构的缺点：</p><p>1、在跨浏览器上，BS架构不尽如人意。<br>2、表现要达到CS程序的程度需要花费不少精力。<br>3、在速度和安全性上需要花费巨大的设计成本，这是BS架构的最大问题。<br>4、客户端服务器端的交互是请求-响应模式，通常需要刷新页面，这并不是客户乐意看到的。（在Ajax风行后此问题得到了一定程度的缓解）</p><p>三、B/S架构的几种形式<br>第一种：客户端-服务器-数据库</p><p><img src="https://img-blog.csdnimg.cn/20200118152126513.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NlYV9zbm93,size_16,color_FFFFFF,t_70" alt="img"></p><p>这个应该是我们平时比较常用的一种模式：</p><p>1、客户端向服务器发起Http请求</p><p>2、服务器中的web服务层能够处理Http请求</p><p>3、服务器中的应用层部分调用业务逻辑，调用业务逻辑上的方法</p><p>4、如果有必要，服务器会和数据库进行数据交换. 然后将模版＋数据渲染成最终的Html, 返送给客户端</p><p>第二种：客户端－web服务器－应用服务器－数据库</p><p><img src="https://img-blog.csdnimg.cn/20200118151926798.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NlYV9zbm93,size_16,color_FFFFFF,t_70" alt="img"></p><p> 类似于第一种方法，只是将web服务和应用服务解耦</p><p>1 客户端向web服务器发起Http请求</p><p>2 web服务能够处理Http请求，并且调用应用服务器暴露在外的RESTFUL接口</p><p>3 应用服务器的RESTFUL接口被调用，会执行对应的暴露方法.如果有必要和数据库进行数据交互，应用服务器会和数据库进行交互后，将json数据返回给web服务器</p><p>4 web服务器将模版＋数据组合渲染成html返回给客户端</p><p>第三种方法：客户端－负载均衡器(Nginx)－中间服务器(Node)－应用服务器－数据库</p><p>这种模式一般用在有大量的用户，高并发的应用中。<img src="https://img-blog.csdnimg.cn/20200118152234550.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NlYV9zbm93,size_16,color_FFFFFF,t_70" alt="img"></p><p>1、整正暴露在外的不是真正web服务器的地址，而是负载均衡器器的地址</p><p>2、客户向负载均衡器发起Http请求</p><p>3、负载均衡器能够将客户端的Http请求均匀的转发给Node服务器集群</p><p>4、Node服务器接收到Http请求之后，能够对其进行解析，并且能够调用应用服务器暴露在外的RESTFUL接口</p><p>5、应用服务器的RESTFUL接口被调用，会执行对应的暴露方法.如果有必要和数据库进行数据交互，应用服务器会和数据库进行交互后，将json数据返回给Node</p><p>6、Node层将模版＋数据组合渲染成html返回反向代理服务器</p><p>7、反向代理服务器将对应html返回给客户端</p><p>Nginx的优点有:</p><p>1、它能够承受、高并发的大量的请求，然后将这些请求均匀的转发给内部的服务器，分摊压力.</p><p>2、反向代理能够解决跨域引起的问题，因为Nginx，Node,应用服务器，数据库都处于内网段中。</p><p>3、Nginx非常擅长处理静态资源(img,css,js,video)，所以也经常作为静态资源服务器，也就是我们平时所说的CDN</p><p>　　比如：前一个用户访问index.html, 经过Nginx－Node－应用服务器－数据库链路之后，Nginx会把index.html返回给用户，并且会把index.html缓存在Nginx上，</p><p>　　下一个用户再想请求index.html的时候，请求Nginx服务器，Nginx发现有index.html的缓存，于是就不用去请求Node层了，会直接将缓存的页面(如果没过期的话)返回给用户。</p><p>四、发展前景</p><p>1、 C/S和B/S各有优势，C/S在图形的表现能力上以及运行的速度上肯定是强于B/S模式的，不过缺点就是他需要运行专门的客户端，而且更重要的是它不能跨平台，用c++在windows下写的程序肯定是不能在linux下跑的。</p><p>2、B/S模式就，它不需要专门的客户端，只要浏览器，而浏览器是随操作系统就有的，方便就是他的优势了。<br>而且，B/S是基于网页语言的、与操作系统无关，所以跨平台也是它的优势，而且以后随着网页语言以及浏览器的进步，<br>B/S在表现能力上的处理以及运行的速度上会越来越快，它的缺点将会越来越少。尤其是HTML5的普及，在图形的渲染方面以及音频、文件的处理上已经非常强大了。 </p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Day 2</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>响应状态码</title>
+    <link href="/2022/06/16/%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81/"/>
+    <url>/2022/06/16/%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81/</url>
+    
+    <content type="html"><![CDATA[<h2 id="一、状态码大类"><a href="#一、状态码大类" class="headerlink" title="一、状态码大类"></a>一、状态码大类</h2><table><thead><tr><th>状态码分类</th><th>说明</th></tr></thead><tbody><tr><td>1xx</td><td><strong>响应中</strong>——临时状态码，表示请求已经接受，告诉客户端应该继续请求或者如果它已经完成则忽略它</td></tr><tr><td>2xx</td><td><strong>成功</strong>——表示请求已经被成功接收，处理已完成</td></tr><tr><td>3xx</td><td><strong>重定向</strong>——重定向到其它地方：它让客户端再发起一个请求以完成整个处理。</td></tr><tr><td>4xx</td><td><strong>客户端错误</strong>——处理发生错误，责任在客户端，如：客户端的请求一个不存在的资源，客户端未被授权，禁止访问等</td></tr><tr><td>5xx</td><td><strong>服务器端错误</strong>——处理发生错误，责任在服务端，如：服务端抛出异常，路由出错，HTTP版本不支持等</td></tr></tbody></table><p>状态码大全：<a href="https://cloud.tencent.com/developer/chapter/13553">https://cloud.tencent.com/developer/chapter/13553</a> </p><h2 id="二、常见的响应状态码"><a href="#二、常见的响应状态码" class="headerlink" title="二、常见的响应状态码"></a>二、常见的响应状态码</h2><table><thead><tr><th>状态码</th><th>英文描述</th><th>解释</th></tr></thead><tbody><tr><td>200</td><td><strong><code>OK</code></strong></td><td>客户端请求成功，即<strong>处理成功</strong>，这是我们最想看到的状态码</td></tr><tr><td>302</td><td><strong><code>Found</code></strong></td><td>指示所请求的资源已移动到由<code>Location</code>响应头给定的 URL，浏览器会自动重新访问到这个页面</td></tr><tr><td>304</td><td><strong><code>Not Modified</code></strong></td><td>告诉客户端，你请求的资源至上次取得后，服务端并未更改，你直接用你本地缓存吧。隐式重定向</td></tr><tr><td>400</td><td><strong><code>Bad Request</code></strong></td><td>客户端请求有<strong>语法错误</strong>，不能被服务器所理解</td></tr><tr><td>403</td><td><strong><code>Forbidden</code></strong></td><td>服务器收到请求，但是<strong>拒绝提供服务</strong>，比如：没有权限访问相关资源</td></tr><tr><td>404</td><td><strong><code>Not Found</code></strong></td><td><strong>请求资源不存在</strong>，一般是URL输入有误，或者网站资源被删除了</td></tr><tr><td>428</td><td><strong><code>Precondition Required</code></strong></td><td><strong>服务器要求有条件的请求</strong>，告诉客户端要想访问该资源，必须携带特定的请求头</td></tr><tr><td>429</td><td><strong><code>Too Many Requests</code></strong></td><td><strong>太多请求</strong>，可以限制客户端请求某个资源的数量，配合 Retry-After(多长时间后可以请求)响应头一起使用</td></tr><tr><td>431</td><td><strong><code> Request Header Fields Too Large</code></strong></td><td><strong>请求头太大</strong>，服务器不愿意处理请求，因为它的头部字段太大。请求可以在减少请求头域的大小后重新提交。</td></tr><tr><td>405</td><td><strong><code>Method Not Allowed</code></strong></td><td>请求方式有误，比如应该用GET请求方式的资源，用了POST</td></tr><tr><td>500</td><td><strong><code>Internal Server Error</code></strong></td><td><strong>服务器发生不可预期的错误</strong>。服务器出异常了，赶紧看日志去吧</td></tr><tr><td>503</td><td><strong><code>Service Unavailable</code></strong></td><td><strong>服务器尚未准备好处理请求</strong>，服务器刚刚启动，还未初始化好</td></tr><tr><td>511</td><td><strong><code>Network Authentication Required</code></strong></td><td><strong>客户端需要进行身份验证才能获得网络访问权限</strong></td></tr></tbody></table>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Day 2</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>我的第一篇博客</title>
+    <link href="/2022/06/15/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+    <url>/2022/06/15/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    
+    <content type="html"><![CDATA[<h1 id="标语"><a href="#标语" class="headerlink" title="标语"></a>标语</h1><h2 id="记录我的第一篇博客-开设编写对fluid主题的配置进行完善"><a href="#记录我的第一篇博客-开设编写对fluid主题的配置进行完善" class="headerlink" title="记录我的第一篇博客 开设编写对fluid主题的配置进行完善"></a>记录我的第一篇博客 开设编写对fluid主题的配置进行完善</h2><p>我的第一篇博客</p><ul><li>学习fluid主题配置的更新</li><li>完善对对应图片更换</li><li>学习博客的使用</li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Day 1</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2022/06/07/hello-world/"/>
     <url>/2022/06/07/hello-world/</url>
