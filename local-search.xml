@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>MVC框架</title>
+    <link href="/2022/07/03/MVC%E6%A1%86%E6%9E%B6/"/>
+    <url>/2022/07/03/MVC%E6%A1%86%E6%9E%B6/</url>
+    
+    <content type="html"><![CDATA[<h1 id="MVC框架模式与SpringMVC框架"><a href="#MVC框架模式与SpringMVC框架" class="headerlink" title="MVC框架模式与SpringMVC框架"></a>MVC框架模式与SpringMVC框架</h1><p><strong>框架通常是代码重用，而设计模式是设计重用。</strong></p><p><strong>框架的介绍：</strong><a href="https://blog.csdn.net/qq_36827957/article/details/78515403">https://blog.csdn.net/qq_36827957/article/details/78515403</a></p><p>MVC: Model View Controller 模型-视图-控制器</p><p>视图：用户看到并与之交互的界面。</p><p>模型：表示<strong>企业数据和业务规则</strong>。在MVC的3个部件中，模型拥有最多的处理任务。被模型返回的数据是独立的，与数据格式无关。这样的一个模式能够为多个视图提供数据，这样一来模型的代码只需要写一次便能够被多个视图重用，减少了代码的重复性。</p><p>控制器：接受用户的输入并调用相应的模型和视图来完成用户的需求，所以当用户点击web页面中的超链接和发送表单时，控制器本身不输出任何东西和做任何处理。它只是接收请求并根据请求来调用哪个模型去处理请求，然后在决定用哪个视图来显示返回的数据</p><h3 id="SpringMVC框架"><a href="#SpringMVC框架" class="headerlink" title="SpringMVC框架"></a><a href="https://so.csdn.net/so/search?q=SpringMVC&spm=1001.2101.3001.7020">SpringMVC</a>框架</h3><h4 id="3-1-SpringMVC简介"><a href="#3-1-SpringMVC简介" class="headerlink" title="3.1 SpringMVC简介"></a>3.1 SpringMVC简介</h4><p><strong>springMVC框架是基于Java的实现了MVC框架模式的请求驱动类型的轻量级框架</strong>。前端控制器是DispatcherServlet接口实现类，映射处理器是HandlerMapping接口实现类，视图解析器是ViewResolver接口实现类，页面控制器是Controller接口实现类。SpringMVC的工作流程图如下：<img src="C:\Users\29769\AppData\Roaming\Typora\typora-user-images\image-20220315210943247.png" alt="image-20220315210943247"></p><p>（1）客户端请求提交到前端控制器DispatcherServlet；<br>（2）前端控制器DispatcherServlet查找一个或者多个映射处理器HandlerMapping，从而确定调用哪个页面控制器Controller对请求进行处理；<br>（3）DispatcherServlet将请求提交给Controller；<br>（4）Controller根据业务逻辑对请求进行处理，并返回ModelAndView；<br>（5）DispatcherServlet查找一个或者多个ViewResolver，得到ModelAndView指定的视图view，并将model中的数据传入视图view中进行渲染；<br>（6）DispatcherServlet将渲染后的视图返回响应；</p><p>由上述过程可见，DispatcherServlet是Spring MVC的核心，它负责协调SpringMVC的各个组成部分对所有的Http请求进行处理，其主要工作如下：<br>（1）截获符合特定格式的Http请求；<br>（2）初始化DispatcherServlet上下文对应的WebApplicationContext，并将其与业务层、持久层的WebApplicationContext关联起来；<br>（3）初始化Spring MVC的各个组件，并装配到DispatcherServlet中；</p><h4 id="3-2-SpringMVC框架中的接口"><a href="#3-2-SpringMVC框架中的接口" class="headerlink" title="3.2 SpringMVC框架中的接口"></a>3.2 SpringMVC框架中的接口</h4><p>DispatcherServlet接口：Spring提供的前端控制器，所有的请求都是由它来进行分发。在DispatcherServlet将请求分发到对应的Controller之前，需要借助Spring提供的HandlerMapping才能定位到相应的Controller.</p><p>HandlerMapping接口：完成客户请求到Controller的映射。</p><p>Controller接口：需要为并发用户处理请求，在实现Controller接口时，必须保证线程安全且可重用。<br>在Controller完成用户请求的处理，返回ModelAndView对象给DispatcherServlet，ModelAndView对象中包含了模型Model和视图View。<br>从宏观角度进行考虑，DispatcherServlet是整个Web应用的控制器；从微观角度进行考虑，Controller是单个Http请求处理过程的控制器。</p><p>ViewResolver接口：根据ModelAndView对象在web应用查找view视图，并将model中是数据传入到view视图中进行渲染。</p><h4 id="3-3-SpringMVC框架优势"><a href="#3-3-SpringMVC框架优势" class="headerlink" title="3.3 SpringMVC框架优势"></a>3.3 SpringMVC框架优势</h4><p>（1）角色清晰，分工明确，进行更简介的web开发；<br>（2）和其他Spring框架无缝集成；<br>（3）强大的JSP标签库；<br>（4）HandlerMapping, ViewResolver等能够简单地进行定制；</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>MVC</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Springboot基础篇</title>
     <link href="/2022/07/03/Springboot%E5%9F%BA%E7%A1%80%E7%AF%87/"/>
     <url>/2022/07/03/Springboot%E5%9F%BA%E7%A1%80%E7%AF%87/</url>
