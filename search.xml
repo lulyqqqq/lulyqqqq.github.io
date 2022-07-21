@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>MYSQL基础篇</title>
+      <link href="/2022/07/21/MYSQL%E5%9F%BA%E7%A1%80%E7%AF%87/"/>
+      <url>/2022/07/21/MYSQL%E5%9F%BA%E7%A1%80%E7%AF%87/</url>
+      
+        <content type="html"><![CDATA[<h1 id="MYSQL"><a href="#MYSQL" class="headerlink" title="MYSQL"></a>MYSQL</h1><h2 id="数据库相关概念"><a href="#数据库相关概念" class="headerlink" title="数据库相关概念"></a>数据库相关概念</h2><ul><li>数据库：存储数据的仓库，数据是有组织的进行存储</li><li>数据库管理系统：操纵和管理数据库的大型软件</li><li>SQL：操作关系型数据库的编程语言，定义了一套操作关系型数据库统一<strong>标准</strong></li></ul><h2 id="MYSQL数据库"><a href="#MYSQL数据库" class="headerlink" title="MYSQL数据库"></a>MYSQL数据库</h2><h3 id="关系型数据库"><a href="#关系型数据库" class="headerlink" title="关系型数据库"></a>关系型数据库</h3><p>概念：建立在关系模型基础上，由多张相互连接的二维表组成的数据库</p><h4 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h4><ul><li>使用表存储数据，格式统一，便于维护</li><li>使用SQL语言操作，标准统一，使用方便</li></ul><h4 id="SQL的通用语法"><a href="#SQL的通用语法" class="headerlink" title="SQL的通用语法"></a>SQL的通用语法</h4><ul><li>SOL语句可以单行或多行书写，以分号结民。 </li><li>SOL语句可以使用空格&#x2F;縮进来增强语句的可读性。 </li><li>MySOL数据库的SOL语句不区分大小写，关链宇建议使用大写。</li><li>注释： 单行注释：–注释内容 或＃注释内容(MySOL特有) 多行注释：&#x2F;* 注释内容容*&#x2F;，</li></ul><h3 id="SQL分类"><a href="#SQL分类" class="headerlink" title="SQL分类"></a>SQL分类</h3><p>DDL(Data Defintion Language):数据定义语言，用来定义数据库对象(数据库，表，字段)</p><p>DML(Data Manipulation Language):数据操作语言，用来对数据库表中的数据进行增删改</p><p>DQL((Data Query Language):数据查询语言，用来查询数据库中表的记录</p><p>DCL(Data Control Language):数据控制语言，用来创建数据库账户，控制数据库的访问权限</p><h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>一段可以直接被另一段程序调用的程序或代码</p><p><a href="https://www.php.cn/faq/464781.html">数据库函数有哪些-常见问题-PHP中文网</a></p><h4 id="字符串函数"><a href="#字符串函数" class="headerlink" title="字符串函数"></a>字符串函数</h4><p><img src="/2022/07/21/MYSQL%E5%9F%BA%E7%A1%80%E7%AF%87/6.png" alt="字符串函数"></p><h4 id="数值函数"><a href="#数值函数" class="headerlink" title="数值函数"></a>数值函数</h4><p><img src="/2022/07/21/MYSQL%E5%9F%BA%E7%A1%80%E7%AF%87/5.png" alt="数值函数"></p><h4 id="日期函数"><a href="#日期函数" class="headerlink" title="日期函数"></a>日期函数</h4><p><img src="/2022/07/21/MYSQL%E5%9F%BA%E7%A1%80%E7%AF%87/4.png" alt="日期函数"></p><h4 id="流程函数"><a href="#流程函数" class="headerlink" title="流程函数"></a>流程函数</h4><p>流程函数也是很常用的一类函数，可以在SQL语句中实现条件筛选从而提高语句的效率</p><p><img src="/2022/07/21/MYSQL%E5%9F%BA%E7%A1%80%E7%AF%87/3.png" alt="流程函数"></p><h3 id="约束"><a href="#约束" class="headerlink" title="约束"></a>约束</h3><p>概念：约束是作用于表中字段上的规则，用于限制存储在表中的数据</p><p>目的：保证数据库中数据的正确，有效性和完整性</p><h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><ul><li>非空约束：限制该字段的数据不能为null    关键字：NOT NULL</li><li>唯一约束：保证该字段的所有数据都是唯一，不重复的     关键字：UNIQUE</li><li>主键约束：主键是一行数据的唯一标识，要求非空且唯一   关键字：PRIMARY KEY</li><li>默认约束：保存数据时，如果未指定该字段的值，则采用默认值   关键字：DEFAULT</li><li>检查约束：保证字段值满足某一个条件   关键字：CHECK</li><li>外键约束：用来让两张表的数据之间建立连接，保证数据的一致性和完整性   关键字：FOREOGN KEY</li></ul><h4 id="外键约束的删除-x2F-更新行为"><a href="#外键约束的删除-x2F-更新行为" class="headerlink" title="外键约束的删除&#x2F;更新行为"></a>外键约束的删除&#x2F;更新行为</h4><p>NO ACTION：当在父表中删除&#x2F;更新对应记录时，首先检查该记录是否有对应外键，如果有则不允许删除&#x2F;更新。(与RESTRICT一致)</p><p>RESTRICT：当在父表中删除&#x2F;更新对应记录时，首先检查该记录是否有对应外键，如果有则不允许删除&#x2F;更新。(与NO ACTION一致)</p><p>CASCADE：当在父表中删除&#x2F;更新对应记录时，首先检查该记录是否有对应外键，如果有则也删除&#x2F;更新外键在子表中的记录。</p><p>SET NULL：当在父表中删除对应记录时，首先检查该记录是否有对应外键，如果有则设置子表中该外键值为NULL(这要求外键允许取null)</p><p>SET DEFAULT：父表变更时，子表将外键列设置成一个默认的值(Innodb不支持)</p><p>语法：</p><p>ALTER  TABLE 表名 ADD CONSTRAINT 外键名称 FOREIGNKEY(外键字段) REFERENCES 主表名(主表字段名) ON UPDATE CASCADE ON DELETE CASCADE</p><h3 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h3><p>各表结构之间基本存在三种关系</p><ul><li>一对多</li><li>多对多</li><li>一对一</li></ul><p>概述：从多张表中查询数据</p><p>笛卡尔积：笛卡尔乘积是指在数学中，两个集合A集合和B集合的所有组合情况</p><h4 id="多表查询分类"><a href="#多表查询分类" class="headerlink" title="多表查询分类"></a>多表查询分类</h4><p>连接查询</p><ul><li><p>内连接：相当于查询A,B交际部分数据</p></li><li><p>外连接：</p><ul><li><p>左外连接：查询左表所有数据，以及两张表交集部分数据</p><ul><li>语法：select 字段列表 from 表1 left [outer] join 表2 on 条件</li></ul></li><li><p>右外连接：查询右表所有数据，以及两张表交集部分数据</p><ul><li>语法：select 字段列表 from 表1 right[outer] join 表2 on 条件</li></ul></li></ul></li><li><p>自连接：当前表与自身的连接查询，连接必须使用表别名</p><ul><li>语法：select 字段列表 from 表a 别名a join 表a 表名 b on条件</li></ul></li></ul><p>联合查询</p><p>对于union查询，就是把多次查询的结合合并起来，形成以恶搞新的查询结果集</p><p>语法：</p><p>select 字段列表 from 表a … </p><p>union [all]</p><p>select 字段列表 from 表b … </p><p>对应联合查询的多张表的列数必须保持一致，字段类型也需要保持一致</p><p>union all 会将全部的数据直接合并在一起，union会对合并之后的数据去重</p><h4 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h4><p>概念：SQL语句中嵌套SELECT语句，称为嵌套查询，又称为子查询</p><p>select * from t1 where column &#x3D; (select column1 from t2)</p><h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><p>一组操作集合，要么同时成功，要么同时失败</p><p><img src="/2022/07/21/MYSQL%E5%9F%BA%E7%A1%80%E7%AF%87/1.png" alt="事务操作"></p><h4 id="事务的四大特性"><a href="#事务的四大特性" class="headerlink" title="事务的四大特性"></a>事务的四大特性</h4><ul><li><p>原子性 (Atomicity）：事务是不可分割的最小操作单元，要么全部成功，要么全部失败。</p></li><li><p>一致性 (Consistency）：事务完成时，必须使所有的数据都保持一致状态。</p></li><li><p>隔离性 (Isolation）：数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立环境下运行。 </p></li><li><p>持久性 (Durability)：事务一旦提交或回滚，它对数据库中的数据的改变就是永久的</p></li></ul><h4 id="并发事务问题"><a href="#并发事务问题" class="headerlink" title="并发事务问题"></a>并发事务问题</h4><ul><li>脏读：一个事务读取到另一个事务还没有提交的数据</li><li>不可重复读：一个事务先后读取同一条记录，但两次读取的数据不同，称之为不可重复读</li><li>幻读：一个事务按照条件查询数据时，没有对应的数据行，但是在插入数据时，又发现这行数据已经存在，好像是出现了幻影</li></ul><h4 id="事务的隔离级别"><a href="#事务的隔离级别" class="headerlink" title="事务的隔离级别"></a>事务的隔离级别</h4><p><img src="/2022/07/21/MYSQL%E5%9F%BA%E7%A1%80%E7%AF%87/2.png" alt="事务隔离级别"></p><p>注意：事务隔离级别越高，数据越安全，但是性能越低</p><h2 id="SQL优化"><a href="#SQL优化" class="headerlink" title="SQL优化"></a>SQL优化</h2><p><a href="https://zhuanlan.zhihu.com/p/265852739">SQL优化最干货总结 - MySQL（2020最新版） - 知乎 (zhihu.com)</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MYSQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>springboot开发实用篇</title>
       <link href="/2022/07/16/springboot%E5%BC%80%E5%8F%91%E5%AE%9E%E7%94%A8%E7%AF%87/"/>
       <url>/2022/07/16/springboot%E5%BC%80%E5%8F%91%E5%AE%9E%E7%94%A8%E7%AF%87/</url>
